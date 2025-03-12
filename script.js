@@ -6,6 +6,7 @@ document.addEventListener("DOMContentLoaded", function () {
     const checkInDateInput = document.getElementById("check-in");
     const checkOutDateInput = document.getElementById("check-out");
     const customerPhoneInput = document.getElementById("phone-number");
+    const customerSpecialNeeds = document.getElementById("special-needs");
     const bookingList = document.getElementById("booking-list");
 
 
@@ -27,11 +28,11 @@ document.addEventListener("DOMContentLoaded", function () {
         event.preventDefault(); // Prevents form from reloading the page
 
         const customerName = customerNameInput.value.trim();
-        const customerLastName = customerLastNameInput.value.trim();
-        const guestNumber = guestNumberInput.value.trim();
-        const checkInDate = checkInDateInput.value.trim();
-        const checkOutDate = checkOutDateInput.value.trim();
-        const customerPhone = customerPhoneInput.value.trim();
+        // const customerLastName = customerLastNameInput.value.trim();
+        // const guestNumber = guestNumberInput.value.trim();
+        // const checkInDate = checkInDateInput.value.trim();
+        // const checkOutDate = checkOutDateInput.value.trim();
+        // const customerPhone = customerPhoneInput.value.trim();
 
         if (customerName === "") {
             // Swal.fire("Please enter a customer name.");
@@ -43,6 +44,12 @@ document.addEventListener("DOMContentLoaded", function () {
         bookingList.appendChild(listItem);
 
         customerNameInput.value = ""; // Clear input field
+        customerLastNameInput.value = "";
+        guestNumberInput.value = "";
+        checkInDateInput.value = "";
+        checkOutDateInput.value = "";
+        customerPhoneInput.value = "";
+        customerSpecialNeeds.value = "";
     });
 });
 
