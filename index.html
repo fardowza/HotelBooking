@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hotel Booking System</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+    <h1 class="title">Hack the Gap - Hotel Booking System</h1>
+
+    <div class="main-container">
+        <!-- Booking Registration Form -->
+        <div class="box form-box">
+            <h2>New Booking</h2>
+            <form id="booking-form">
+                <label for="customer-name">Customer First Name:</label>
+                <input required type="text" id="customer-name" placeholder="Enter customer First name">
+                
+                <label for="customer-last-name">Customer Last Name:</label>
+                <input required type="text" id="customer-last-name" placeholder="Enter customer Last name">
+                
+                <label for="number-guests">Number of Guests</label>
+                <input required type="number" min="1" id="number-guests" placeholder="Enter number of guests">
+                
+                <label for="check-in">Check-In Date</label>
+                <input required type="date" id="check-in" >
+                
+                <label for="number-guests">Check-Out Date</label>
+                <input required type="date" id="check-out">
+
+                <label for="phone-number">Customer Phone Number</label>
+                <input type="tel" id="phone-number" name="phone" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" placeholder="000-000-0000">
+                
+                <label for="special-needs">Special Needs:</label>
+                <input type="textarea" id="special-needs" placeholder="Enter any special needs">
+
+                <button type="submit">Register Booking</button>
+            </form>
+        </div>
+
+        <!-- Booking List -->
+        <div class="box list-box">
+            <h2>Booking List</h2>
+            <ul id="booking-list">
+                <!-- Bookings will be added here -->
+            </ul>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
